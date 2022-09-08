@@ -98,14 +98,12 @@ namespace Characters
         }
 
         [ServerCallback]
-
         private void OnTriggerEnter(Collider other)
         {
             RpcChangePostion(new Vector3(100, 100, 100));
         }
 
         [ClientRpc]
-
         private async void RpcChangePostion(Vector3 newPosition)
         {
             gameObject.SetActive(false);
